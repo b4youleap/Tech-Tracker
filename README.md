@@ -58,4 +58,10 @@ Translations so far:
     * used ng generate service technology to gen needed stuff - services are provided rather than imported so only adds test scaffold
     * NOTE: Need to circle back through tutorial and extract some good reasons WHY some code is done a certain way - tomorrow before doing the advanced tutorials
 
-    
+### From Routing tutorial
+    * lots of relocations
+    * instead of renaming gyrations I created a technologies component ng generate component technologies to = heroes.component
+    * this caused work:
+    ** strip app.component.ts moving most parts into technologies.component.ts
+    ** move app.component.html content to technologies.component.html 
+    ** move app.component.css content to technologies.component.css  

@@ -1,20 +1,4 @@
 <h1>
   {{title}}
 </h1>
-<h2>
-  Technologies
-</h2>
-<ul class="technologies">
-  <li *ngFor="let technology of technologies"
-    [class.selected]="technology === selectedTechnology"
-     (click)="onSelect(technology)">
-    <span class="badge">{{technology.id}}</span> {{technology.name}}
-  </li>
-</ul>
-
-
-<br>
-<app-tech-detail [technology]="selectedTechnology"></app-tech-detail>
-<h3>
-  *Note: Valid lifecycle states are "Standard", "Containment", "Retirement", and "Research"
-</h3>
+<app-technologies></app-technologies>
