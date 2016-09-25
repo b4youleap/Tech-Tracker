@@ -1,6 +1,6 @@
 # Rsrchndevl
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 / on Node version 5.12.0 (x64) / with npm version 3.10.8
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -29,3 +29,7 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Notes on angular-cli (9/24/2016)
+ * There is an error towards the end of the install during the 'build' phase where errors are thrown for NODE-GYP and something else un-catchable as it flew by. Installing
+    Visual Studio 2015 Build Tools (C++) did not help.
