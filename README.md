@@ -1,6 +1,8 @@
-# Rsrchndevl
+# Tech-Tracker
+## A transformation of the Tour of Heroes Tutorial using angular-cli and applied to Technologies.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 / on Node version 5.12.0 (x64) / with npm version 3.10.8
+This project was initially generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 / on Node version 5.12.0 (x64) / with npm version 3.10.8
+The final version maintained those tooling versions. Any further updates (like continuing with the advanced tutorials) will likely be done in a separate project.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
