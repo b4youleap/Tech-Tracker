@@ -33,3 +33,25 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
 ## Notes on angular-cli (9/24/2016)
  * There is an error towards the end of the install during the 'build' phase where errors are thrown for NODE-GYP and something else un-catchable as it flew by. Installing
     Visual Studio 2015 Build Tools (C++) did not help.
+
+## Notes on working through the 'Tour of Heroes' Tutorial (except using angular-cli instead of the QuickStart steps to create the app)
+This project aims to create a Technical Roadmap / R&D tracking / Technology Standards application as translated from the TOH tutorial and other advanced tutorials
+found on angular.io (as of 9/24/2016).
+
+Translations so far:
+
+### From Introduction through Master/Detail tutorials
+    * lowercase hero = technology
+    * lowercase heroes = technologies
+    * uppercase HEROES = TECHNOLOGIES
+    * mixedcase Hero = Technology
+    * mixedcase selectedHero = selectedTechnology
+
+### From Multiple Components tutorial
+    * used ng generate component tech-detail to gen all pieces needed - nicely handles making app.module aware and adds test scaffold
+    * kebab-cased hero-detail.component.ts = tech-detail.component.ts
+    * used element tag from ng generated code rather than my-hero-detail
+    * GOTCHA - change selectedTechnology to technology in HTML - the Input decorator defines it
+
+### From Services tutorial
+    *

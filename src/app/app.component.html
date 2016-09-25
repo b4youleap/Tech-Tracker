@@ -14,22 +14,7 @@
 
 
 <br>
-<div *ngIf="selectedTechnology">
-<h2>{{selectedTechnology.name}} details:</h2>
-<div><label>id: </label>{{selectedTechnology.id}}</div>
-<div>
-  <label>name: </label><input [(ngModel)]="selectedTechnology.name" placeholder="name">
-</div>
-<div>
-  <label>id: </label><input [(ngModel)]="selectedTechnology.id" placeholder="id">
-</div>
-<div>
-  <label>version: </label><input [(ngModel)]="selectedTechnology.version" placeholder="version">
-</div>
-<div>
-  <label>stage: </label><input [(ngModel)]="selectedTechnology.stage" placeholder="stage">
-</div> 
-</div>
+<app-tech-detail [technology]="selectedTechnology"></app-tech-detail>
 <h3>
   *Note: Valid lifecycle states are "Standard", "Containment", "Retirement", and "Research"
 </h3>

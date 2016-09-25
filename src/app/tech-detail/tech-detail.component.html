@@ -1,0 +1,16 @@
+<div *ngIf="technology">
+<h2>{{technology.name}} details:</h2>
+<div><label>id: </label>{{technology.id}}</div>
+<div>
+  <label>name: </label><input [(ngModel)]="technology.name" placeholder="name">
+</div>
+<div>
+  <label>id: </label><input [(ngModel)]="technology.id" placeholder="id">
+</div>
+<div>
+  <label>version: </label><input [(ngModel)]="technology.version" placeholder="version">
+</div>
+<div>
+  <label>stage: </label><input [(ngModel)]="technology.stage" placeholder="stage">
+</div> 
+</div>

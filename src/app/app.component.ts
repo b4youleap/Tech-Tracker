@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Technology {
-  id: string;
-  name: string;
-  version: string;
-  stage: string;
-}
+import { Technology } from './technology';
 
 const TECHNOLOGIES: Technology[] = [
     { id: 'ts101', name: 'OS X', version: '10.11', stage: 'Standard' },
