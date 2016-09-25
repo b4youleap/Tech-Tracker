@@ -1,24 +1,29 @@
-import { Component } from '@angular/core';
-import { Technology } from './technology';
+import { Component, OnInit } from '@angular/core';
 
-const TECHNOLOGIES: Technology[] = [
-    { id: 'ts101', name: 'OS X', version: '10.11', stage: 'Standard' },
-    { id: 'ts102', name: 'Windows', version: '10', stage: 'Standard' },
-    { id: 'ts103', name: 'Touch HW', version: 'x', stage: 'Standard' },
-    { id: 'ts104', name: 'Local Hypervisor', version: 'x', stage: 'Research' },
-    { id: 'ts105', name: 'Hardware RFP', version: 'x', stage: 'Research' },
-    { id: 'ts106', name: 'Lenovo', version: 'x', stage: 'Retired' }
-];
+import { Technology } from './technology';
+import { TechnologyService } from './technology.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [TechnologyService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Technology Roadmap - Technology Listing';
-  technologies = TECHNOLOGIES;
+  // technologies = TECHNOLOGIES;
+  technologies: Technology[];
   selectedTechnology: Technology;
+
+  constructor(private technologyService: TechnologyService) {}
+
+  ngOnInit(): void {
+    this.getTechnologies();
+  }
+
+  getTechnologies(): void {
+    this.technologyService.getTechnologies().then(technologies => this.technologies = technologies);
+  }
 
   onSelect(technology: Technology): void {
     this.selectedTechnology = technology;
