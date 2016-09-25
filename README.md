@@ -49,9 +49,13 @@ Translations so far:
 
 ### From Multiple Components tutorial
     * used ng generate component tech-detail to gen all pieces needed - nicely handles making app.module aware and adds test scaffold
+    * NOTE: used shortened tech-detail instead of technology-detail to = hero-detail
     * kebab-cased hero-detail.component.ts = tech-detail.component.ts
     * used element tag from ng generated code rather than my-hero-detail
     * GOTCHA - change selectedTechnology to technology in HTML - the Input decorator defines it
 
 ### From Services tutorial
-    *
+    * used ng generate service technology to gen needed stuff - services are provided rather than imported so only adds test scaffold
+    * NOTE: Need to circle back through tutorial and extract some good reasons WHY some code is done a certain way - tomorrow before doing the advanced tutorials
+
+    
