@@ -33,4 +33,9 @@ export class TechDetailComponent implements OnInit {
     */
   }
 
+  save(): void {
+    this.technologyService.update(this.technology)
+      .then(this.goBack);
+  }
+
 }

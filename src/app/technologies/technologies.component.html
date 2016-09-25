@@ -1,11 +1,18 @@
 <h2>
   Technologies
 </h2>
+<div>
+  <label>Technology name:</label> <input #technologyName />
+  <button (click)="add(technologyName.value); technologyName.value=''">
+    Add
+  </button>
+</div>
 <ul class="technologies">
   <li *ngFor="let technology of technologies"
     [class.selected]="technology === selectedTechnology"
      (click)="onSelect(technology)">
-    <span class="badge">{{technology.id}}</span> {{technology.name}}
+    <span class="badge">{{technology.id}}</span><span>{{technology.name}}</span>
+    <button class="delete" (click)="delete(technology); $event.stopPropagation()">x</button>
   </li>
 </ul>
 

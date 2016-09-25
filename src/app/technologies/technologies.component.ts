@@ -37,4 +37,23 @@ export class TechnologiesComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedTechnology.id]);
   }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.technologyService.create(name)
+      .then(technology => {
+        this.technologies.push(technology);
+        this.selectedTechnology = null;
+      });
+  }
+
+  delete(technology: Technology): void {
+    this.technologyService
+      .delete(technology.id)
+      .then(() => {
+        this.technologies = this.technologies.filter(t => t !== technology);
+        if (this.selectedTechnology === technology) { this.selectedTechnology = null; }
+      });
+  }
 }
