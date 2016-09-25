@@ -71,3 +71,8 @@ Translations so far:
 
 ### From HTTP tutorial
     * http module added by angular-cli from the start
+    
+## Notes added to code files
+I went back through the TOH tutorials and added code comments from the tutorial that explained what I thought were key concepts for the marginally aware developer like 
+myself. I really hope this helps someone but if not, it was a very good learning exercise to transform the tutorial into something a little more relevant for 
+what I was trying to accomplish. 

@@ -22,3 +22,13 @@ body, input[text], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+/*  Global application styles
+When we add styles to a component, we're keeping everything a component needs — HTML, 
+the CSS, the code — together in one convenient place. It's pretty easy to package it 
+all up and re-use the component somewhere else.
+
+We can also create styles at the application level outside of any component.
+
+Our designers provided some basic styles to apply to elements across the entire app. 
+These correspond to the full set of master styles that we introduced earlier (see QuickStart, "Add some style").
+*/

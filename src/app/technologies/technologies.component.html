@@ -6,6 +6,10 @@
   <button (click)="add(technologyName.value); technologyName.value=''">
     Add
   </button>
+  <!--
+    In response to a click event (see the event in the button above), we call the component's 
+    click handler and then clear the input field so that it will be ready to use for another name.
+    -->
 </div>
 <ul class="technologies">
   <li *ngFor="let technology of technologies"
@@ -13,6 +17,11 @@
      (click)="onSelect(technology)">
     <span class="badge">{{technology.id}}</span><span>{{technology.name}}</span>
     <button class="delete" (click)="delete(technology); $event.stopPropagation()">x</button>
+    <!--
+      In addition to calling the component's delete method, the delete button click handling code 
+      stops the propagation of the click event — we don't want the <li> click handler to be triggered 
+        because that would select the technology that we are going to delete!
+      -->
   </li>
 </ul>
 
@@ -20,7 +29,11 @@
 <br>
 <div *ngIf="selectedTechnology">
   <h2>
-    {{selectedTechnology.name | uppercase}} is my selection
+    {{selectedTechnology.name | uppercase}} is selected
+    <!-- 
+      Pipes are a good way to format strings, currency amounts, dates and other display data. 
+      Angular ships with several pipes and we can write our own.
+    -->
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
@@ -28,3 +41,36 @@
 <h3>
   *Note: Valid lifecycle states are "Standard", "Containment", "Retirement", and "Research"
 </h3>
+<!-- Notes on *ngFor:
+The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template.
+
+The let keyword before "technology" identifies technology as a template input variable. We can reference this variable 
+within the template to access a technology’s properties.
+
+Focus on the event binding
+
+    (click)="onSelect(technology)"
+
+The parenthesis identify the <li> element’s click event as the target. The expression to the right of the equal sign calls 
+the AppComponent method, onSelect(), passing the template input variable technology as an argument. That’s the same 
+technology variable we defined previously in the ngFor.
+
+    Notes on *ngIf:
+When there is no selectedTechnology, the ngIf directive removes the technology detail HTML from the DOM. There will be no 
+technology detail elements and no bindings to worry about.
+
+When the user picks a technology, selectedTechnology becomes "truthy" and ngIf puts the technology detail content into the 
+DOM and evaluates the nested bindings.
+
+    Notes on CSS:
+We added a property binding on class for the selected class to the template. We set this to an expression that compares the 
+current selectedTechnology to the technology.
+
+The key is the name of the CSS class (selected). The value is true if the two technologies match and false otherwise. We’re 
+saying “apply the selected class if the technologies match, remove it if they don’t”.
+
+    Notes on bindings:
+Notice in the template that the class.selected is surrounded in square brackets ([]). This is the syntax for a property 
+binding, a binding in which data flows one way from the data source (the expression technology === selectedTechnology) to 
+a property of class.
+-->

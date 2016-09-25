@@ -48,7 +48,19 @@ export class TechnologySearchComponent implements OnInit {
 
 }
 
-/*
+/*  SEARCH TERMS
+
+Let's focus on the searchTerms:
+A Subject is a producer of an observable event stream; searchTerms produces an Observable of strings, the filter 
+criteria for the name search.
+
+Each call to search puts a new string into this subject's observable stream by calling next.
+
+INITIALIZE THE TECHNOLOGIES PROPERTY (NGONINIT)
+
+A Subject is also an Observable. We're going to turn the stream of search terms into a stream of Technology arrays 
+and assign the result to the technologies property.
+
 If we passed every user keystroke directly to the HeroSearchService, we'd unleash a storm of HTTP requests. Bad 
 idea. We don't want to tax our server resources and burn through our cellular network data plan.
 
@@ -78,4 +90,18 @@ text is empty.
 
 Note that canceling the HeroSearchService observable won't actually abort a pending HTTP request until 
 the service supports that feature, a topic for another day. We are content for now to discard unwanted results.
+
+- catch intercepts a failed observable. Our simple example prints the error to the console; a real life application 
+  should do better. Then we return an observable containing an empty array to clear the search result.
+
+Import RxJS operators
+The RxJS operators are not available in Angular's base Observable implementation. We have to extend Observable by 
+importing them. We combine all of the RxJS Observable extensions that our entire app requires into a single RxJS imports file.
+We load them all at once by importing rxjs-extensions at the top of AppModule.
+
+//  Notes on Providers:
+The providers array tells Angular to create a fresh instance of the TechnologyService when it creates a new 
+AppComponent. The AppComponent can use that service to find technologies and so can every child component of 
+its component tree.
+
 */

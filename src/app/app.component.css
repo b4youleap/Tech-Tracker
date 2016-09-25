@@ -26,3 +26,8 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+/*      The routerLinkActive directive (see nav a.active above - the running example is meh but still visible)
+
+The Angular Router provides a routerLinkActive directive we can use to add a class to the HTML navigation element whose 
+route matches the active route. All we have to do is define the style for it. Sweet!
+*/

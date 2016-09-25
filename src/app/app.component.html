@@ -6,3 +6,17 @@
   <a routerLink="/technologies" routerLinkActive="active">Technologies</a>
 </nav>
 <router-outlet></router-outlet>
+
+<!-- Notes from the Routing Tutorial:
+The AppComponent should only handle navigation. Let's move the display of Technologies out of AppComponent and into 
+its own TechnologiesComponent.
+
+    The routerLinkActive directive
+
+The Angular Router provides a routerLinkActive directive we can use to add a class to the HTML navigation element whose 
+route matches the active route. All we have to do is define the style for it. Sweet!
+
+    Thoughts:
+I wonder if the AppComponent really is the best place for nav - wouldn't the shell of an app include nav, sidebars
+and footers? Should there be a shared layout component?
+-->
