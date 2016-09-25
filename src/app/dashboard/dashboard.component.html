@@ -1,0 +1,8 @@
+<h3>Significant Technologies</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let technology of technologies" (click)="gotoDetail(technology)" class="col-1-4">
+    <div class="module technology">
+      <h4>{{technology.name}}</h4>
+    </div>
+  </div>
+</div>

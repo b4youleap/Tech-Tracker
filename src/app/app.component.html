@@ -1,4 +1,8 @@
 <h1>
   {{title}}
 </h1>
-<app-technologies></app-technologies>
+<nav>
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/technologies" routerLinkActive="active">Technologies</a>
+</nav>
+<router-outlet></router-outlet>

@@ -7,17 +7,21 @@ import { AppComponent } from './app.component';
 import { TechDetailComponent } from './tech-detail/tech-detail.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { TechnologyService } from './technology.service';
+import { routing } from './app.routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TechDetailComponent,
-    TechnologiesComponent
+    TechnologiesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [
     TechnologyService

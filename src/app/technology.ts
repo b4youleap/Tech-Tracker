@@ -1,5 +1,5 @@
 export class Technology {
-  id: string;
+  id: number;
   name: string;
   version: string;
   stage: string;

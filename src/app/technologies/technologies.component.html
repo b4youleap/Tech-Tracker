@@ -11,7 +11,13 @@
 
 
 <br>
-<app-tech-detail [technology]="selectedTechnology"></app-tech-detail>
+<div *ngIf="selectedTechnology">
+  <h2>
+    {{selectedTechnology.name | uppercase}} is my selection
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
 <h3>
   *Note: Valid lifecycle states are "Standard", "Containment", "Retirement", and "Research"
 </h3>

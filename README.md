@@ -65,3 +65,6 @@ Translations so far:
     ** strip app.component.ts moving most parts into technologies.component.ts
     ** move app.component.html content to technologies.component.html 
     ** move app.component.css content to technologies.component.css  
+    * added app.routing.ts manually - ng has no generator at this beta release
+    * NOTE: Some goofiness... get an error before "Select a Dashboard Hero": "... couldn't find component blah, blah, blah so stop/start server and error disappears
+    ** Part 2 was a bear to debug. By FAR, this was the toughest tutorial (at 1:30 am)

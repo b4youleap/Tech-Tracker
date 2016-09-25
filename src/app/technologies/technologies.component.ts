@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Technology } from '../technology';
 import { TechnologyService } from '../technology.service';
@@ -15,7 +16,11 @@ export class TechnologiesComponent implements OnInit {
   technologies: Technology[];
   selectedTechnology: Technology;
 
-  constructor(private technologyService: TechnologyService) {}
+  constructor(
+    private router: Router,
+    private technologyService: TechnologyService) {
+
+    }
 
   ngOnInit(): void {
     this.getTechnologies();
@@ -27,5 +32,9 @@ export class TechnologiesComponent implements OnInit {
 
   onSelect(technology: Technology): void {
     this.selectedTechnology = technology;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedTechnology.id]);
   }
 }

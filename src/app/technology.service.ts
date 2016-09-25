@@ -11,4 +11,9 @@ export class TechnologyService {
     return Promise.resolve(TECHNOLOGIES);
   }
 
+  getTechnology(id: number): Promise<Technology> {
+    return this.getTechnologies()
+      .then(technologies => technologies.find(technology => technology.id === id));
+  }
+
 }
