@@ -1,6 +1,8 @@
 # Tech-Tracker
 ## A transformation of the Tour of Heroes Tutorial using angular-cli and applied to Technologies.
 
+Updated for Angular 4 / Angular CLI 1.0.4 - did not implement any changes that may have occurred in the tutorial though.
+
 This project was initially generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 / on Node version 5.12.0 (x64) / with npm version 3.10.8
 The final version maintained those tooling versions. Any further updates (like continuing with the advanced tutorials) will likely be done in a separate project.
 
